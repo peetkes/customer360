@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    function:
+      definition: >-
+        acmeretailOnlineservicesCustomerCreatedV2RegionIdCustomerIdConsumer;acmeretailOnlineservicesOrderCreatedV2RegionIdOrderIdConsumer;acmeretailC360Supplier;acmeretailOnlineservicesCustomerUpdatedV2RegionIdCustomerIdConsumer
+    stream:
+      bindings:
+        acmeretailOnlineservicesCustomerCreatedV2RegionIdCustomerIdConsumer-in-0:
+          destination: acmeretail/onlineservices/customer/created/v2/*/*
+        acmeretailOnlineservicesOrderCreatedV2RegionIdOrderIdConsumer-in-0:
+          destination: acmeretail/onlineservices/order/created/v2/*/*
+        acmeretailC360Supplier-out-0:
+          destination: acmeretail/c360
+        acmeretailOnlineservicesCustomerUpdatedV2RegionIdCustomerIdConsumer-in-0:
+          destination: acmeretail/onlineservices/customer/updated/v2/*/*
+logging:
+  level:
+    root: info
+    org:
+      springframework: info
+
